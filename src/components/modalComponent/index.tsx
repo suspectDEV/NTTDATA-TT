@@ -1,10 +1,10 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { Link } from 'react-router-dom';
 
 
-function AlertComponent({...props}) {
+function AlertComponent({ ...props }) {
   return (
     <Modal
       {...props}
@@ -18,16 +18,16 @@ function AlertComponent({...props}) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <p>
-          No se han encontrado resultados con el número o tipo de documento seleccionado.
-          <br />
-          Verifique la documentación para ingresar un documento válido.
-        </p>
+        No se han encontrado resultados con el número o tipo de documento seleccionado.
+        <br />
+        Verifique la documentación para ingresar un documento válido.
       </Modal.Body>
       <Modal.Footer>
-        <Button>
-            <Link to="/">Regresar</Link>
-            </Button>
+        <Link to="/">
+          <Button>
+            Regresar
+          </Button>
+        </Link>
       </Modal.Footer>
     </Modal>
   );
@@ -42,7 +42,7 @@ function AlertComponent({...props}) {
 //         Launch vertically centered modal
 //       </Button>
 
-      
+
 //     </>
 //   );
 // }
