@@ -10,7 +10,7 @@ const OPTIONS = [
 
 export default function FormComponent() {
   const [isValid, setIsValid] = React.useState(false);
-  const [typeDoc, setTypeDoc] = React.useState<string>();
+  const [typeDoc, setTypeDoc] = React.useState<string>("empty");
   const [numDoc, setNumDoc] = React.useState<string>("");
   const navigate = useNavigate();
 
@@ -27,16 +27,15 @@ export default function FormComponent() {
       <Stack direction="vertical">
         <Form onSubmit={handleSubmit}>
           <Form.Text className="span-form">Todos los campos son obligatorios</Form.Text>
-          <br />
           <Form.Label className="label-form" htmlFor="type">
             Tipo de documento
           </Form.Label>
-          <Form.Select 
-            id="type" className="input-form" name="type" onChange={onChangeType}>
-            <option value="empty" defaultChecked>
+          <Form.Select
+            id="type" className="input-form" name="type" onChange={onChangeType} defaultValue="empty">
+            <option value="empty" disabled>
               Selecciona tipo de documento
             </option>
-            {OPTIONS.map((val, i) => (
+            {OPTIONS.map((val) => (
               <option key={val.key} value={val.key}>
                 {val.value}
               </option>
@@ -84,7 +83,6 @@ export default function FormComponent() {
     const data = new FormData(event.currentTarget);
     const type = data?.get('type')?.toString() + '';
     const num = data?.get('number')?.toString() + '';
-    console.log(type, num);
     navigate(`/search?num=${num}&type=${type}`);
   }
 }

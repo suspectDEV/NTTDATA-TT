@@ -8,7 +8,6 @@ function AlertComponent({ ...props }) {
   return (
     <Modal
       {...props}
-      size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
@@ -20,7 +19,7 @@ function AlertComponent({ ...props }) {
       <Modal.Body>
         No se han encontrado resultados con el número o tipo de documento seleccionado.
         <br />
-        Verifique la documentación para ingresar un documento válido.
+        Verifique la <a href='https://github.com/suspectDEV/NTTDATA-pruebaTecnica#datos-de-prueba' target="_blank">documentación</a> para ingresar un documento válido.
       </Modal.Body>
       <Modal.Footer>
         <Link to="/">
@@ -32,19 +31,4 @@ function AlertComponent({ ...props }) {
     </Modal>
   );
 }
-
-// function AlertDispatch() {
-//   const [modalShow, setModalShow] = useState(false);
-
-//   return (
-//     <>
-//       <Button variant="primary" onClick={() => setModalShow(true)}>
-//         Launch vertically centered modal
-//       </Button>
-
-
-//     </>
-//   );
-// }
-
 export default AlertComponent;
