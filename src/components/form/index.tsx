@@ -11,7 +11,7 @@ const OPTIONS = [
 export default function FormComponent() {
   const [isValid, setIsValid] = React.useState(false);
   const [typeDoc, setTypeDoc] = React.useState<string>();
-  const [numDoc, setNumDoc] = React.useState<string>("10100100102");
+  const [numDoc, setNumDoc] = React.useState<string>("");
   const navigate = useNavigate();
 
   React.useEffect(() => {
