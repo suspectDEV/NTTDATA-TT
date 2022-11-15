@@ -1,0 +1,63 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+h1,
+p {
+  font-family: Lato;
+}
+
+body{
+  background-color: #f7faff;
+}
+
+#root{
+  margin: auto;
+}
+
+.container {
+  background-color: #f7faff;
+  padding: 3rem 2rem;
+  border: 1px solid #DFE2E7;
+  box-shadow: 0 0 1rem #DFE2E7;
+  border-radius: .5rem;
+  width: 350px;
+}
+
+/**
+* -- Form Component
+*/
+.tlt-form {
+  margin-bottom: 1.4rem;
+}
+
+.span-form {
+  margin-bottom: 3.4rem;
+}
+
+.label-form {
+  color: #002c76;
+  font-size: 0.85rem;
+  margin-bottom: 0.1rem;
+  padding: 0;
+}
+
+.input-form {
+  margin-bottom: 1rem;
+}
+
+.link-form {
+  margin-top: 2rem;
+}
+
+.btn-form,
+.btn-form:active,
+.btn-form:focus {
+  border-radius: 100px;
+  background-color: #002c76;
+  color: white;
+  margin-top: 1.5rem;
+}
+
+.btn-form[disabled] {
+  background-color: #eaedf2;
+  color: #c4c7cc;
+}
