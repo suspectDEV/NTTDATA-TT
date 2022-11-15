@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
+// @ts-ignore
 import HardCodedUsers from '../../data/users';
 import { Container, Form, Stack } from 'react-bootstrap';
 import AlertComponent from '../modalComponent';
