@@ -1,25 +1,36 @@
-# NTTDATA - Prueba técnica
+# NTTDATA - TT
 
-https://nttdata.alexfl.co/
+https://nttdata.alxfl.co/
 
-## Configuración inicial
+## Getting started
 
-Instalar paquetes de node y ejecutar la aplicación.
+Install node packages and serve application.
 ```
 yarn
 yarn dev
 ```
 
-## Estructura general
-El código de desarrollo se encuentra en la carpeta `src` distribuido en tres subcarpetas.
-- `components` para los componentes que se utilizan en cada pantalla.
-- `data` con la información estática de los usuarios, tipo y número de documento.
-- `styles` para los estilos de la aplicación
+### Folder structure
+    ├── ...
+    ├── src/
+    │   └── components/             # Reusable components
+    │   │   └── form/               # For forms
+    │   │   └── modalComponent/     # For modals
+    │   │   └── userResume/         # For user information
+    │   ├── data/                   # Database simulation
+    │   │   └── users.json          # Seed information
+    │   ├── styles/                 # CSS files
+    │   │   └── index.css           # ..subfile
+    │   │   └── styles.css          # ..subfile
+    │   ├── App.tsx                 # Routes
+    │   ├── main.tsx                # Startup
+    │   └── vite-env.d.ts           # Environment vars
+    └── ...
 
-## Datos de prueba
-La información de los usuarios está almacenada en el archivo `data/users.json` distribuidos en dos grupos de consulta:
+### Seed information
+Customize data user in `data/users.json`. The file contain some records:
 
-1. Pasaporte
+1. Passport
 - 20100100100
 - 20100100101
 - 20100100103
@@ -28,7 +39,7 @@ La información de los usuarios está almacenada en el archivo `data/users.json`
 - 20100100106
 - 20100100107
 
-2. Cédula de ciudadanía
+2. DNI
 - 10100100100
 - 10100100102
 - 10100100103
@@ -36,4 +47,4 @@ La información de los usuarios está almacenada en el archivo `data/users.json`
 - 10100100105
 
 <hr />
-<sub><sup>© 2022  Alexander Forero L.</sup></sub>
+<sub><sup>© 2022 suspect</sup></sub>
